@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Ingestion Gate Bookmarks</title>
+
+<!-- Boosted -->
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!-- -->
+<!-- IE11 WARNING
+      <!-- IE11 enterprise docmode IE8 -->
+<!-- If your application is executed into IE8 compatibility mode, or included into a frame you need to replace the following test `if lt IE 9` by `if IE` otherwise your website will crash -->
+<!-- -->
+<!--[if IE]>
+        <link rel="stylesheet" href="css/bootstrap-orangeIE82015.css" />
+        <link rel="stylesheet" href="css/boostedIE82015.css">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+<!--[if (gte IE 9) | (!IE)]><!-->
+<link rel="stylesheet" href="css/bootstrap-orange2015.css" />
+<link rel="stylesheet" href="css/boosted2015.css">
+<!--<![endif]-->
+
+</head>
+<body>
+	<div class="container">
+		<h1>
+			<small class="text-primary">Bookmark:</small> Ingestion Gate
+		</h1>
+
+		<hr />
+
+		<div role="tabpanel">
+			<ul class="nav nav-pills nav-justified" role="tablist">
+				<li role="presentation" class="active"><a href="#local" data-toggle="tab" aria-controls="local" role="tab"> local </a></li>
+				<li role="presentation"><a href="#dev" data-toggle="tab" aria-controls="dev" role="tab"> dev </a></li>
+				<li role="presentation"><a href="#preprod" data-toggle="tab" aria-controls="preprod" role="tab"> pre prod </a></li>
+				<li role="presentation"><a href="#prod" data-toggle="tab" aria-controls="prod" role="tab"> prod </a></li>
+			</ul>
+			<div class="tab-content" style="border: none;">
+				<div class="tab-pane active" id="local" role="tabpanel">
+					<div class="alert alert-info small" role="alert">
+						LOCAL environment need API and client <strong>AND local database</strong> to be up to date and launched in order to work properly.<br /> Remember to check the following:
+						<ul>
+							<li>MySQL is running and database up to date</li>
+							<li>NPM start has been asked on client</li>
+						</ul>
+					</div>
+
+					<table class="table table-hover">
+						<tr>
+							<th>Modules</th>
+							<th>Links</th>
+						</tr>
+
+						<tr>
+							<td>Ingestion Gate Client</td>
+							<td><a class="btn btn-link" href="http://localhost:3000/" target="_blank"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;client</a></td>
+						</tr>
+
+						<tr>
+							<td>Ingestion Gate API</td>
+							<td>
+								<a class="btn btn-link" href="http://localhost:8080/ingestion-gate/" target="_blank">
+									<span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;documentation
+								</a>
+								<br/>
+								<a class="btn btn-link" href="http://localhost:8080/ingestion-gate/api/v1/public/applications" target="_blank">
+									<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;published application containers
+								</a>
+								<br/>
+								<a class="btn btn-link" href="http://localhost:8080/ingestion-gate/api/v1/public/versions?package=com.orange.update&version=default" target="_blank">
+									<span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;application version by package name and version
+								</a>
+								<br/>
+								<a class="btn btn-link" href="http://localhost:8080/ingestion-gate/api/v1/public/status" target="_blank">
+									<span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;status
+								</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="tab-pane" id="dev" role="tabpanel">
+					<div class="alert alert-info small" role="alert">DEV environment runs the last stable build of the develop branch automatically deployed by Jenkins jobs.</div>
+					
+					<table class="table table-hover">
+						<tr>
+							<th>Modules</th>
+							<th>Links</th>
+						</tr>
+
+						<tr>
+							<td>Ingestion Gate Client</td>
+							<td><a class="btn btn-link" href="https://ig-dev.itn.intraorange/" target="_blank"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;client</a></td>
+						</tr>
+
+						<tr>
+							<td>Ingestion Gate API</td>
+							<td>
+								<a class="btn btn-link" href="https://ig-api-dev.itn.intraorange/ingestion-gate/" target="_blank">
+									<span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;documentation
+								</a>
+								<br/>
+								<a class="btn btn-link" href="https://ig-api-dev.itn.intraorange/ingestion-gate/api/v1/public/applications" target="_blank">
+									<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;published application containers
+								</a>
+								<br/>
+								<a class="btn btn-link" href="https://ig-api-dev.itn.intraorange/ingestion-gate/api/v1/public/versions?package=com.orange.update&version=default" target="_blank">
+									<span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;application version by package name and version
+								</a>
+								<br/>
+								<a class="btn btn-link" href="https://ig-api-dev.itn.intraorange/ingestion-gate/api/v1/public/status" target="_blank">
+									<span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;status
+								</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="tab-pane" id="preprod" role="tabpanel">
+					<div class="alert alert-info small" role="alert">PREPROD environment runs the latest git flow release automatically deployed by Jenkins jobs.</div>
+					
+					<table class="table table-hover">
+						<tr>
+							<th>Modules</th>
+							<th>Links</th>
+						</tr>
+
+						<tr>
+							<td>Ingestion Gate Client</td>
+							<td><a class="btn btn-link" href="https://ig-pp.itn.intraorange/" target="_blank"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;client</a></td>
+						</tr>
+
+						<tr>
+							<td>Ingestion Gate API</td>
+							<td>
+								<a class="btn btn-link" href="https://ig-api-pp.itn.intraorange/ingestion-gate/" target="_blank">
+									<span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;documentation
+								</a>
+								<br/>
+								<a class="btn btn-link" href="https://ig-api-pp.itn.intraorange/ingestion-gate/api/v1/public/applications" target="_blank">
+									<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;published application containers
+								</a>
+								<br/>
+								<a class="btn btn-link" href="https://ig-api-pp.itn.intraorange/ingestion-gate/api/v1/public/versions?package=com.orange.update&version=default" target="_blank">
+									<span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;application version by package name and version
+								</a>
+								<br/>
+								<a class="btn btn-link" href="https://ig-api-pp.itn.intraorange/ingestion-gate/api/v1/public/status" target="_blank">
+									<span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;status
+								</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="tab-pane" id="prod" role="tabpanel">
+					<div class="alert alert-info small" role="alert">PROD environment runs the latest git flow tag automatically deployed by Jenkins jobs.</div>
+					
+					<table class="table table-hover">
+						<tr>
+							<th>Modules</th>
+							<th>Links</th>
+						</tr>
+
+						<tr>
+							<td>Ingestion Gate Client</td>
+							<td><a class="btn btn-link" href="https://ingestiongate.itn.intraorange/" target="_blank"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;client</a></td>
+						</tr>
+
+						<tr>
+							<td>Ingestion Gate API</td>
+							<td>
+								<a class="btn btn-link" href="https://ig-api.itn.intraorange/ingestion-gate/" target="_blank">
+									<span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;documentation
+								</a>
+								<br/>
+								<a class="btn btn-link" href="https://ig-api.itn.intraorange/ingestion-gate/api/v1/public/applications" target="_blank">
+									<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;published application containers
+								</a>
+								<br/>
+								<a class="btn btn-link" href="https://ig-api.itn.intraorange/ingestion-gate/api/v1/public/versions?package=com.orange.update&version=default" target="_blank">
+									<span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;application version by package name and version
+								</a>
+								<br/>
+								<a class="btn btn-link" href="https://ig-api.itn.intraorange/ingestion-gate/api/v1/public/status" target="_blank">
+									<span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;status
+								</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<hr />
+
+		<h3>Miscellaneous</h3>
+
+		<div class="col-lg-4">
+			<div class="list-group">
+				<style>a { text-decoration: none; }</style>
+				<a class="list-group-item" href="https://icescrum.softaps.rd.francetelecom.fr/icescrum/p/APPO#sprintPlan" target="_blank"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>&nbsp;IceScrum</a>
+				<a class="list-group-item" href="http://10.192.34.162/jenkins/" target="_blank"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;Jenkins</a>
+				<a class="list-group-item" href="http://shp.itn.ftgroup/sites/zzext-ORANGEEXPERIENCE/Apps_Orange/default.aspx" target="_blank"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;Sharepoint</a>
+				<a class="list-group-item" href="http://alm12.rd.francetelecom.fr/qcbin/start_a.jsp" target="_blank"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;Quality Center (use IE)</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- jQuery validate -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+	<!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
+	<script src="js/boosted.js"></script>
+
+</body>
+</html>
